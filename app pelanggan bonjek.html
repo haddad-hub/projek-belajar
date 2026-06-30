@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonjek Pelanggan</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#DE1D7A;--accent-2:#E01E79;--accent-light:#ff7ab8;--bg:#fff7fb;--surface:#fff;--border:#f2c9dc;--text:#24202a;--muted:#7d6675;--green:#16a34a;--shadow:0 18px 44px rgba(74,30,55,.09)}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Inter,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(255,122,184,.22),transparent 32%),linear-gradient(115deg,#fff1f7 0%,#fff 52%,#fff6fb 100%)}button,input,select{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:252px minmax(0,1fr)}.side{position:sticky;top:0;height:100vh;padding:20px;border-right:1px solid var(--border);background:linear-gradient(180deg,#fff,#fff8fc);display:flex;flex-direction:column;gap:18px}.brand{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px;border-radius:15px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 12px 26px rgba(222,29,122,.13)}.logo img{width:100%;height:100%;object-fit:contain;padding:5px}.brand h1{margin:0;font-size:18px}.brand p{margin:3px 0 0;color:var(--muted);font-size:12px;font-weight:800}.nav{display:grid;gap:7px}.nav-btn{border:0;background:transparent;color:var(--muted);border-radius:14px;padding:12px;display:flex;align-items:center;gap:11px;font-weight:800;text-align:left;transition:.18s ease}.nav-btn i{width:18px;text-align:center}.nav-btn.active,.nav-btn:hover{background:#ffe2f0;color:var(--accent)}.side-note{margin-top:auto;border:1px solid var(--border);background:#fff;border-radius:17px;padding:14px;color:var(--muted);font-size:12px;line-height:1.55}.main{width:100%;max-width:1180px;margin:0 auto;padding:22px}.top{background:linear-gradient(135deg,var(--accent),var(--accent-2),var(--accent-light));color:#fff;border-radius:22px;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 18px 42px rgba(222,29,122,.18)}.top h2{margin:0;font-size:22px}.top p{margin:5px 0 0;color:#ffe4f1;font-size:14px}.status-pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 11px;background:rgba(255,255,255,.16);color:#fff;font-size:12px;font-weight:800;white-space:nowrap}.page{display:none;margin-top:18px}.page.active{display:block}.card{background:linear-gradient(180deg,#fff,#fffbfd);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:var(--shadow)}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.section-title h3{margin:0;font-size:17px}.section-title p{margin:4px 0 0;color:var(--muted);font-size:13px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.metric{min-height:120px;display:flex;flex-direction:column;justify-content:space-between}.metric-icon{width:42px;height:42px;border-radius:14px;background:#ffe2f0;color:var(--accent);display:flex;align-items:center;justify-content:center}.metric p,.meta{color:var(--muted);font-size:13px;line-height:1.55}.metric p{margin:0}.metric h3{margin:4px 0 0;font-size:29px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.full{grid-column:1/-1}.label{display:block;font-size:12px;font-weight:800;color:var(--muted);margin-bottom:7px}.field{width:100%;border:1px solid var(--border);border-radius:13px;padding:12px;outline:none;background:#fff}.field:focus{border-color:var(--accent);box-shadow:0 0 0 3px #ffe2f0}.btn{border:0;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent-2),var(--accent-light));color:#fff;font-weight:800;padding:12px 14px;display:inline-flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 12px 24px rgba(222,29,122,.16)}.btn.ghost{background:#fff;color:var(--text);border:1px solid var(--border);box-shadow:none}.order{border:1px solid var(--border);border-radius:17px;padding:15px;background:#fff8fc;margin-bottom:12px}.order-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.order strong{font-size:15px}.badge{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:800;background:#ffe2f0;color:var(--accent);white-space:nowrap}.badge.green{background:#dcfce7;color:#15803d}.empty{text-align:center;color:var(--muted);padding:38px 10px;border:1px dashed var(--border);border-radius:16px;background:#fff8fc}.profile-summary{margin-top:16px;border-top:1px solid var(--border);padding-top:14px}.photo-box{display:flex;align-items:center;gap:14px;margin-bottom:16px}.profile-photo{width:78px;height:78px;border-radius:22px;object-fit:cover;background:#ffe2f0;border:1px solid var(--border)}.file-input{display:none}.bottom-nav{display:none}
+@media(max-width:840px){.app{display:block}.side{display:none}.main{padding:16px 16px 92px}.top{display:block;border-radius:20px}.status-pill{margin-top:12px}.grid-3,.grid-2,.form-grid{grid-template-columns:1fr}.section-title{align-items:flex-start}.bottom-nav{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:rgba(255,255,255,.94);border:1px solid var(--border);border-radius:20px;padding:8px;box-shadow:0 18px 44px rgba(74,30,55,.16);backdrop-filter:blur(14px)}.bottom-nav .nav-btn{justify-content:center;padding:10px 6px;font-size:11px;display:grid;gap:4px}.bottom-nav .nav-btn i{width:auto;font-size:16px}.bottom-nav .nav-btn span{display:block}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><div class="logo"><img src="logo.png" alt="Logo Bonjek"></div><div><h1>Bonjek Pelanggan</h1><p>Customer App</p></div></div>
+    <nav class="nav" aria-label="Navigasi pelanggan">
+      <button class="nav-btn active" data-page="home" onclick="showPage('home')"><i class="fa-solid fa-house"></i><span>Beranda</span></button>
+      <button class="nav-btn" data-page="order" onclick="showPage('order')"><i class="fa-solid fa-utensils"></i><span>Pesan</span></button>
+      <button class="nav-btn" data-page="history" onclick="showPage('history')"><i class="fa-solid fa-receipt"></i><span>Histori</span></button>
+      <button class="nav-btn" data-page="profile" onclick="showPage('profile')"><i class="fa-solid fa-user"></i><span>Profil</span></button>
+    </nav>
+    <div class="side-note"><b style="color:var(--text)">Status sinkron</b><br>Pesanan yang dibuat akan muncul di app kurir dan dashboard analisis.</div>
+  </aside>
+
+  <main class="main">
+    <header class="top"><div><h2 id="pageTitle">Beranda</h2><p id="pageSubtitle">Buat dan pantau pesanan Bonjek.</p></div><span class="status-pill"><i class="fa-solid fa-signal"></i> Terhubung ke dashboard</span></header>
+
+    <section class="page active" id="page-home">
+      <div class="grid-3">
+        <div class="card metric"><span class="metric-icon"><i class="fa-solid fa-clock"></i></span><div><p>Menunggu Kurir</p><h3 id="metricNew">0</h3></div></div>
+        <div class="card metric"><span class="metric-icon"><i class="fa-solid fa-motorcycle"></i></span><div><p>Sedang Diantar</p><h3 id="metricAccepted">0</h3></div></div>
+        <div class="card metric"><span class="metric-icon"><i class="fa-solid fa-circle-check"></i></span><div><p>Selesai</p><h3 id="metricCompleted">0</h3></div></div>
+      </div>
+      <div class="card" style="margin-top:14px"><div class="section-title"><div><h3>Pesanan Terbaru</h3><p>Status pesanan terbaru dari pelanggan.</p></div><button class="btn ghost" onclick="showPage('order')"><i class="fa-solid fa-plus"></i> Buat Pesanan</button></div><div id="homeOrders"></div></div>
+    </section>
+
+    <section class="page" id="page-order">
+      <div class="card"><div class="section-title"><div><h3>Buat Pesanan</h3><p>Username dan nomor HP otomatis memakai profil akun yang sedang login.</p></div></div><div class="form-grid"><div><label class="label" for="category">Jenis</label><select class="field" id="category"><option>Makanan</option><option>Minuman</option></select></div><div><label class="label" for="qty">Jumlah</label><input class="field" id="qty" type="number" min="1" value="1"></div><div class="full"><label class="label" for="orderDate">Tanggal Pesanan</label><input class="field" id="orderDate" type="date"></div><div class="full"><label class="label" for="item">Pesanan</label><input class="field" id="item" placeholder="Contoh: Nasi goreng + es teh"></div><div class="full"><label class="label" for="pickup">Lokasi Ambil</label><input class="field" id="pickup" placeholder="Contoh: Warung Bu Sari, Bontang"></div><div class="full"><label class="label" for="dropoff">Alamat Antar</label><input class="field" id="dropoff" placeholder="Contoh: Jl. Ahmad Yani No. 10"></div><div class="full"><label class="label" for="note">Catatan</label><input class="field" id="note" placeholder="Opsional"></div><button class="btn full" onclick="createOrder()"><i class="fa-solid fa-paper-plane"></i> Kirim Pesanan</button></div></div>
+    </section>
+
+    <section class="page" id="page-history">
+      <div class="card"><div class="section-title"><div><h3>Histori Pesanan</h3><p>Semua pesanan yang tersimpan di perangkat ini.</p></div></div><div id="historyOrders"></div></div>
+    </section>
+
+    <section class="page" id="page-profile">
+      <div class="card"><div class="section-title"><div><h3>Profil Pelanggan</h3><p>Username dipakai sebagai login lokal dan pemisah histori akun.</p></div></div><div class="photo-box"><img class="profile-photo" id="profilePhotoPreview" alt="Foto profil"><div><input class="file-input" id="profilePhoto" type="file" accept="image/*" onchange="handleProfilePhoto(this)"><button class="btn ghost" onclick="profilePhoto.click()"><i class="fa-solid fa-camera"></i> Pilih Foto</button><p class="meta" style="margin:8px 0 0">Foto tersimpan di profil username aktif.</p></div></div><div class="grid-2"><div><label class="label" for="profileUsername">Username</label><input class="field" id="profileUsername" placeholder="Contoh: andi01"></div><div><label class="label" for="profilePhone">No. HP</label><input class="field" id="profilePhone" placeholder="08xxxxxxxxxx"></div><div><label class="label" for="profileAddress">Alamat Utama</label><input class="field" id="profileAddress" placeholder="Contoh: Jl. Ahmad Yani No. 10"></div><div><button class="btn" onclick="saveProfile()"><i class="fa-solid fa-right-to-bracket"></i> Masuk / Simpan Profil</button></div><div><button class="btn ghost" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></div></div><div class="profile-summary"><p class="meta" id="profileInfo">Profil belum disimpan.</p></div></div>
+    </section>
+  </main>
+</div>
+
+<nav class="bottom-nav" aria-label="Navigasi pelanggan mobile">
+  <button class="nav-btn active" data-page="home" onclick="showPage('home')"><i class="fa-solid fa-house"></i><span>Beranda</span></button>
+  <button class="nav-btn" data-page="order" onclick="showPage('order')"><i class="fa-solid fa-utensils"></i><span>Pesan</span></button>
+  <button class="nav-btn" data-page="history" onclick="showPage('history')"><i class="fa-solid fa-receipt"></i><span>Histori</span></button>
+  <button class="nav-btn" data-page="profile" onclick="showPage('profile')"><i class="fa-solid fa-user"></i><span>Profil</span></button>
+</nav>
+
+<script src="bonjek-shared.js"></script>
+<script>
+const CUSTOMER_PROFILE_KEY='bonjek_customer_profiles_v2';
+const CUSTOMER_ACTIVE_KEY='bonjek_customer_active_username_v2';
+const PAGE_COPY={home:['Beranda','Buat dan pantau pesanan Bonjek.'],order:['Pesan','Isi detail pesanan makanan atau minuman.'],history:['Histori','Pantau status dan riwayat pesanan.'],profile:['Profil','Simpan data pelanggan untuk pesanan berikutnya.']};
+function rupiah(value){return 'Rp '+Number(value||0).toLocaleString('id-ID')}
+function formatDate(value){return value?new Date(value+'T00:00:00').toLocaleDateString('id-ID',{day:'2-digit',month:'short',year:'numeric'}):'-'}
+function statusLabel(status){return {new:'Menunggu kurir',accepted:'Sedang diantar',awaiting_confirmation:'Menunggu konfirmasi',completed:'Selesai'}[status]||status}
+function slug(value){return String(value||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+function readProfiles(){try{return JSON.parse(localStorage.getItem(CUSTOMER_PROFILE_KEY)||'{}')}catch(error){return {}}}
+function activeUsername(){return localStorage.getItem(CUSTOMER_ACTIVE_KEY)||''}
+function customerId(username){return username?'CUST-'+slug(username).toUpperCase():''}
+function getProfile(){const username=activeUsername();const profile=username?(readProfiles()[username]||{}):{};return profile.username?{...profile,name:profile.username}:profile}
+function applyProfileToForm(){const profile=getProfile();dropoff.value=profile.address||dropoff.value||''}
+function saveProfile(){const username=slug(profileUsername.value);const profiles=readProfiles();const existing=profiles[username]||{};const photo=profilePhotoPreview.dataset.photo||existing.photo||'';const profile={id:customerId(username),username,name:username,phone:profilePhone.value.trim()||existing.phone||'',address:profileAddress.value.trim()||existing.address||'',photo};if(!profile.username){alert('Username pelanggan wajib diisi.');return}profiles[profile.username]=profile;localStorage.setItem(CUSTOMER_PROFILE_KEY,JSON.stringify(profiles));localStorage.setItem(CUSTOMER_ACTIVE_KEY,profile.username);renderProfile();applyProfileToForm();render()}
+function handleProfilePhoto(input){const file=input.files&&input.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{profilePhotoPreview.src=reader.result;profilePhotoPreview.dataset.photo=reader.result};reader.readAsDataURL(file)}
+function renderProfile(){const profile=getProfile();profileUsername.value=profile.username||activeUsername();profilePhone.value=profile.phone||'';profileAddress.value=profile.address||'';profilePhotoPreview.src=profile.photo||'logo.png';profilePhotoPreview.dataset.photo=profile.photo||'';profileInfo.textContent=profile.username?`${profile.username} | ${profile.phone||'No HP belum diisi'} | ${profile.address||'Alamat belum diisi'}`:'Profil belum disimpan. Isi username untuk memisahkan histori akun.'}
+function logout(){localStorage.removeItem(CUSTOMER_ACTIVE_KEY);profileUsername.value='';profilePhone.value='';profileAddress.value='';profilePhotoPreview.src='logo.png';profilePhotoPreview.dataset.photo='';dropoff.value='';renderProfile();render();showPage('profile')}
+function showPage(page){document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));document.getElementById('page-'+page).classList.add('active');document.querySelectorAll('.nav-btn').forEach(btn=>btn.classList.toggle('active',btn.dataset.page===page));pageTitle.textContent=PAGE_COPY[page][0];pageSubtitle.textContent=PAGE_COPY[page][1];if(page==='order')applyProfileToForm();render()}
+function createOrder(){const profile=getProfile();const input=['item','pickup','dropoff'].map(id=>document.getElementById(id));if(!profile.username){alert('Login atau simpan profil pelanggan dulu sebelum membuat pesanan.');showPage('profile');return}if(input.some(el=>!el.value.trim())){alert('Pesanan, lokasi ambil, dan alamat antar wajib diisi.');return}BonjekStore.createOrder({customerId:profile.id,customerUsername:profile.username,customerName:profile.username,customerPhone:profile.phone||'',category:category.value,qty:qty.value,item:item.value,pickup:pickup.value,dropoff:dropoff.value,note:note.value,date:orderDate.value});['item','pickup','note'].forEach(id=>document.getElementById(id).value='');qty.value=1;showPage('history')}
+function confirmReceived(id){BonjekStore.confirmOrder(id);render()}
+function orderCard(order){const done=order.status==='completed';const waiting=order.status==='awaiting_confirmation';return `<div class="order"><div class="order-head"><div><strong>${order.item}</strong><p class="meta" style="margin:5px 0 0">${order.customerName} | ${order.qty} item | ${order.category}</p></div><span class="badge ${done?'green':''}">${statusLabel(order.status)}</span></div><p class="meta"><b>Tanggal:</b> ${formatDate(order.date)}<br><b>Ambil:</b> ${order.pickup||'-'}<br><b>Antar:</b> ${order.dropoff||'-'}<br><b>Kurir:</b> ${order.courierName||'-'}${order.revenue?`<br><b>Total:</b> ${rupiah(order.revenue)}`:''}</p>${waiting?`<button class="btn" onclick="confirmReceived('${order.id}')"><i class="fa-solid fa-circle-check"></i> Konfirmasi Pesanan Diterima</button>`:''}</div>`}
+function renderList(target,orders,emptyText){document.getElementById(target).innerHTML=orders.length?orders.map(orderCard).join(''):`<div class="empty">${emptyText}</div>`}
+function ownOrders(){const profile=getProfile();if(!profile.username)return [];return BonjekStore.read().orders.filter(order=>order.customerId===profile.id||order.customerUsername===profile.username)}
+function render(){const orders=ownOrders();const newOrders=orders.filter(order=>order.status==='new');const accepted=orders.filter(order=>order.status==='accepted'||order.status==='awaiting_confirmation');const completed=orders.filter(order=>order.status==='completed');metricNew.textContent=newOrders.length;metricAccepted.textContent=accepted.length;metricCompleted.textContent=completed.length;renderList('homeOrders',orders.slice(0,3),activeUsername()?'Belum ada pesanan untuk akun ini.':'Silahkan login terlebih dulu.');renderList('historyOrders',orders,activeUsername()?'Belum ada histori pesanan untuk akun ini.':'Silahkan login terlebih dulu.')}
+window.addEventListener('bonjek:datachange',render);window.addEventListener('storage',event=>{if(event.key===BonjekStore.STORAGE_KEY||event.key===CUSTOMER_PROFILE_KEY||event.key===CUSTOMER_ACTIVE_KEY){renderProfile();render()}});orderDate.value=new Date().toISOString().slice(0,10);renderProfile();applyProfileToForm();render();
+</script>
+</body>
+</html>
+
+
+
+
