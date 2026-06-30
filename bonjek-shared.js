@@ -104,6 +104,7 @@
     const data=read();
     const order=data.orders.find(item=>item.id===orderId);
     if(!order||order.status!=='awaiting_confirmation')return null;
+    const nominal=money(order.revenue);
     order.status='completed';
     order.completedAt=new Date().toISOString();
     order.date=order.date||today();
