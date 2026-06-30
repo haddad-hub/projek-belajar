@@ -67,7 +67,7 @@
 
 <script src="bonjek-shared.js"></script>
 <script>
-const THEME_KEY='bonjek_theme_v1';
+const THEME_KEY='bonjek_theme_courier_v1';
 function applyTheme(){const dark=localStorage.getItem(THEME_KEY)==='dark';document.body.classList.toggle('dark-mode',dark);const toggle=document.getElementById('darkModeToggle');if(toggle)toggle.checked=dark}
 function toggleDarkMode(enabled){localStorage.setItem(THEME_KEY,enabled?'dark':'light');applyTheme()}
 applyTheme();
