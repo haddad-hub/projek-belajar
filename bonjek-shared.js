@@ -129,8 +129,9 @@
   }
   function toAnalyticsPayload(){
     const data=read();
+    const completedOrders=data.orders.filter(order=>order.status==='completed');
     return {
-      orders:data.orders.map(order=>({
+      orders:completedOrders.map(order=>({
         id:order.id,
         date:order.date,
         createdAt:order.createdAt,
